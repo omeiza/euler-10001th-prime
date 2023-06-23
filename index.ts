@@ -3,8 +3,8 @@
  * What is the 10 001st prime number?
  */
 
-function nthPrime(n: number): number {
-	function isPrime(input: number): boolean {
+export default function nthPrime(n: number): number {
+	const isPrime = (input: number): boolean => {
 		for (let i = 2; i < input; i++) {
 			if (input % i === 0) return false;
 		}
@@ -20,5 +20,3 @@ function nthPrime(n: number): number {
 
 	return primeCount;
 }
-
-console.log(nthPrime(10001));
